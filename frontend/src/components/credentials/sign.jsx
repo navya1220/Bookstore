@@ -12,7 +12,7 @@ function Sign() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/api/users/register", { name, email, password })
+      .post("https://bookstore-1-sd2w.onrender.com/api/users/register", { name, email, password })
       .then((result) => {
         console.log(result);
         navigate("/login");
