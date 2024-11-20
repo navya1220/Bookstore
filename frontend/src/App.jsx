@@ -11,9 +11,9 @@ import Login from './components/credentials/login';
 const App = () => {
   return (
     <Routes>
-      <Route path='/register' element={<Sign/>}/>
+      <Route path='/' element={<Sign/>}/>
       <Route path='/login' element={<Login/>} />
-      <Route path='/' element={<Home />} />
+      <Route path='/home' element={<Home />} />
       <Route path='/books/create' element={<CreateBook />} />
       <Route path='/books/details/:id' element={<ShowBook />} />
       <Route path='/books/edit/:id' element={<EditBook />} />

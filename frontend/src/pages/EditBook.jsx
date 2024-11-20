@@ -45,7 +45,7 @@ const EditBook = () => {
       await axios.put(`https://bookstore-1-sd2w.onrender.com/books/${id}`, data);
       setLoading(false);
       enqueueSnackbar('Book updated successfully', { variant: 'success' });
-      navigate('/');
+      navigate('/home');
     } catch (error) {
       setLoading(false);
       enqueueSnackbar('Failed to update book', { variant: 'error' });

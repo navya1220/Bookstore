@@ -15,7 +15,7 @@ function Login() {
       .then((result) => {
         console.log(result);
         if (result.data.status === "Success") {
-          navigate("/");
+          navigate("/home");
         } else {
           console.error("Invalid credentials");
         }
@@ -63,7 +63,7 @@ function Login() {
           Don't have an account?
         </p>
         <Link
-          to="/register"
+          to="/"
           className="block text-center w-full bg-gray-100 py-2 mt-2 rounded-md text-gray-700 hover:bg-gray-200 transition duration-300"
         >
           Sign Up
