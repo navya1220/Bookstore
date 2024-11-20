@@ -5,17 +5,16 @@ import booksRoute from './routes/booksRoute.js';
 import registerRoute from './routes/registerRoute.js';
 import dotenv from 'dotenv';
 
-const app = express();
+dotenv.config();
 
+const app = express();
 app.use(express.json());
 app.use(cors());
-dotenv.config();
 
 connectDB();
 
 app.use('/books', booksRoute);
 app.use('/api/users', registerRoute);
-
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
