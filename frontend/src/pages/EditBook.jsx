@@ -18,7 +18,7 @@ const EditBook = () => {
     const fetchBookDetails = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`http://localhost:3001/books/${id}`);
+        const response = await axios.get(`https://bookstore-1-sd2w.onrender.com/books/${id}`);
         setTitle(response.data.title);
         setAuthor(response.data.author);
         setPublishYear(response.data.publishYear);
@@ -42,7 +42,7 @@ const EditBook = () => {
 
     try {
       setLoading(true);
-      await axios.put(`http://localhost:3001/books/${id}`, data);
+      await axios.put(`https://bookstore-1-sd2w.onrender.com/books/${id}`, data);
       setLoading(false);
       enqueueSnackbar('Book updated successfully', { variant: 'success' });
       navigate('/');
